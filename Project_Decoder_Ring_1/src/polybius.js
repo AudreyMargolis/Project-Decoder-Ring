@@ -30,7 +30,7 @@ const polybiusModule = (function () {
     return arr;
   }
   function polybiusEncode (input) {
-    console.log(input);
+    
     // if i or j
     let loweredCase = input.toLowerCase();
     let encodedMessage = '';
@@ -42,13 +42,12 @@ const polybiusModule = (function () {
       else
         encodedMessage += getKeyByValue(grid, loweredCase[i]);
     }
-    console.log(encodedMessage);
+    
     return encodedMessage;
   }
   function polybiusDecode (input) {
     //even length check
-    console.log(input.length);
-    console.log(input.length % 2);
+    
     if(input.length % 2 !== 0 && !input.includes(' '))
       return false;
     else if (input.length % 2 === 0 && input.includes(' '))
